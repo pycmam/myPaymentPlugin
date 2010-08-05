@@ -1,0 +1,178 @@
+## Платежные системы
+## ========================================================
+#
+## Выбор системы оплаты
+#myPayment:
+#  url: /cabinet/pay/:id
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPayment, action: index }
+#  requirements:
+#    sf_method: [get, post]
+#    id: \d+
+#
+## QIWI
+#payment_qiwi:
+#  url: /pay/qiwi/:id
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentQiwi, action: index }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+#payment_qiwi_create:
+#  url: /pay/qiwi/:id/create
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentQiwi, action: create }
+#
+#payment_qiwi_success:
+#  url: /pay/qiwi/success
+#  param: { module: myPaymentQiwi, action: success }
+#
+#payment_qiwi_fail:
+#  url: /pay/qiwi/fail
+#  param: { module: myPaymentQiwi, action: fail }
+#
+## Webmoney
+#payment_webmoney:
+#  url: /pay/webmoney/:id
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentWebmoney, action: index }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+#payment_webmoney_result:
+#  url: /pay/webmoney/result
+#  param: { module: myPaymentWebmoney, action: result }
+#
+#payment_webmoney_success:
+#  url: /pay/webmoney/success
+#  param: { module: myPaymentWebmoney, action: success }
+#
+#payment_webmoney_fail:
+#  url: /pay/webmoney/fail
+#  param: { module: myPaymentWebmoney, action: fail }
+#
+## Единый кошелек
+#payment_w1:
+#  url: /pay/w1/:id
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentW1, action: index }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+#payment_w1_result:
+#  url: /pay/w1/result
+#  param: { module: myPaymentW1, action: result }
+#
+#payment_w1_success:
+#  url: /pay/w1/success
+#  param: { module: myPaymentW1, action: success }
+#
+#payment_w1_fail:
+#  url: /pay/w1/fail
+#  param: { module: myPaymentW1, action: fail }
+#
+## Sentry (Visa, MasterCard)
+#payment_sentry:
+#  url: /pay/card/:id
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentSentry, action: index }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+#payment_sentry_result:
+#  url: /pay/card/result
+#  param: { module: myPaymentSentry, action: result }
+#
+## LiqPay (Visa, MasterCard)
+#payment_liqpay:
+#  url: /pay/liqpay/:id
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentLiqpay, action: index }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+#payment_liqpay_result:
+#  url: /pay/liqpay/result
+#  param: { module: myPaymentLiqpay, action: result }
+#
+## Приват24
+#payment_privat24:
+#  url: /pay/privat24/:id
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentPrivat24, action: index }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+#payment_privat24_result:
+#  url: /pay/privat24/result
+#  param: { module: myPaymentPrivat24, action: result }
+#
+## Migom
+#payment_migom:
+#  url: /pay/migom/:id
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentMigom, action: index }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+#payment_migom_show:
+#  url: /pay/migom/:id/show
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentMigom, action: show }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+## Банковский перевод
+#payment_invoice:
+#  url: /pay/invoice/:id
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentInvoice, action: index }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+#payment_invoice_ru:
+#  url: /pay/invoice/:id/ru
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentInvoice, action: show, country: ru }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+#payment_invoice_ua:
+#  url: /pay/invoice/:id/ua
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentInvoice, action: show, country: ua }
+#  requirements:
+#    sf_method: get
+#    id: \d+
+#
+#payment_invoice_show:
+#  url: /pay/invoice/:id/:country
+#  class: sfDoctrineRoute
+#  options: { model: Invoice, type: object, method_for_query: getByUser }
+#  param: { module: myPaymentInvoice, action: show }
+#  requirements:
+#    sf_method: get
+#    id: \d+

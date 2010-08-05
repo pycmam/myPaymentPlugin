@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="system" target-language="ru" datatype="plaintext" original="messages">
+    <header/>
+    <body>
+      <trans-unit>
+        <source>form_field: LMI_PAYEE_PURSE</source>
+        <target>Тип кошелька для оплаты:</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

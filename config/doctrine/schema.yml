@@ -1,0 +1,28 @@
+detect_relations: true
+options:
+  type: INNODB
+  charset: utf8
+
+# Счет на оплату
+# --------------------------------------------
+Invoice:
+  tableName:          app_invoices
+  actAs:
+    Timestampable:    ~
+  columns:
+    user_id:          { type: integer, notnull: true }
+    model:            { type: enum, values: ['booking', 'realty'], notnull: true }
+    amount:           { type: decimal, length: 18, scale: 2, notnull: true }
+    description:      { type: string(1024) }
+    payment_system:   { type: string(25) }
+    transaction_id:   { type: integer(20) }
+    transaction_data: { type: string(2048) }
+    is_paid:          { type: boolean, notnull: true, default: false }
+    paid_at:          { type: timestamp }
+  relations:
+    User:
+      class: sfGuardUser
+      local: user_id
+      foreign: id
+      autoComplete: false
+      onDelete: CASCADE

@@ -1,0 +1,5 @@
+all:
+  is_secure: true
+
+result:
+  is_secure: false

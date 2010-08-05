@@ -1,0 +1,13 @@
+ruSuccess:
+  layout: print
+  stylesheets:
+    - invoice.css: { media: all }
+  metas:
+      title: Квитанция на перевод из России
+
+uaSuccess:
+  layout: print
+  stylesheets:
+    - invoice.css: { media: all }
+  metas:
+      title: Квитанция на оплату по Украине

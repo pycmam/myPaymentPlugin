@@ -1,0 +1,6 @@
+showSuccess:
+  layout: print
+  stylesheets:
+    - migom.css: { media: all }
+  metas:
+      title: Реквизиты для перевода Migom

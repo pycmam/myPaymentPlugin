@@ -1,0 +1,103 @@
+#all:
+#  # Настройки Webmoney
+#  webmoney:
+#    merchant_url: https://merchant.webmoney.ru/lmi/payment.asp
+#    wallet:
+#      WMU:
+#        purse: U37..
+#        currency: UAH
+#      WMR:
+#        purse: R22..
+#        currency: RUR
+#      WMZ:
+#        purse: Z17..
+#        currency: USD
+#    secret_key: 123
+#    sim_mode: 0
+#
+#  # Настройки Sentry
+#  sentry:
+#    url: https://www.verification.privatbank.ua/SENTRY/PaymentGateway/Application/CheckoutPage_ru/CheckoutPage.aspx
+#    password: 
+#    merchant:
+#
+#  # Настройки Приват24
+#  privat24:
+#    url: https://api.privatbank.ua:9083/p24api/ishop
+#    merchant:
+#    password:
+#
+#  # Настройки LiqPay
+#  liqpay:
+#    url: https://liqpay.com/?do=clickNbuy
+#    merchant:
+#    password:
+#
+#  # Настройки единого кошелька
+#  w1:
+#    url: https://merchant.w1.ru/checkout/default.aspx
+#    merchant:
+#    secret_key:
+#
+#  # Настройки QIWI
+#  qiwi:
+#    url: http://ishop.qiwi.ru/xml
+#    shop_id:
+#    password:
+#    lifetime: 0
+#    create_client: 1
+#    alarm_sms: 0
+#    alarm_call: 0
+#    log: false
+#
+#  .settings:
+#
+#    # Платежные системы
+#    payment_default:    webmoney
+#    payment_systems:
+#      webmoney:
+#        name:           "Webmoney"
+#        logo:           "/images/webmoney.png"
+#        route:          payment_webmoney
+#        help:           Webmoney
+#      liqpay:
+#        name:           "Visa, MasterCard (liqpay.com)"
+#        logo:           "/images/liqpay.png"
+#        route:          payment_liqpay
+#        help:           "LiqPay: Время проведения платежа в этой системе может варьироваться от <b>1 минуты до 5 дней</b>. Это зависит от того, платите ли вы первый раз с помощью данной системы и от того, как быстро обработает платеж банк, так как данная система работает с банковскими счетами.<br><b>Внимание!</b> Сумма платежа не списывается с вашего счета, пока транзакция не будет окончательно проведена."
+#      sentry:
+#        name:           "Visa, MasterCard"
+#        logo:           "/images/cards.png"
+#        route:          payment_sentry
+#      Ukraine:
+#        is_group:       true
+#      privat24:
+#        name:           "Приват 24 (для клиентов Приват банка)"
+#        logo:           "/images/privat24.png"
+#        route:          payment_privat24
+#        help:           Интернет-банкинг Приват24
+#      w1:
+#        name:           "Платежные терминалы Украина"
+#        logo:           "/images/terminals.png"
+#        route:          payment_w1
+#        help:           Оплата наличными через платежные терминалы Украины "Единый кошелек".
+#        link:           <a href="http://www.w1.ua/map/input/terminal/osmp/" target="_blank">Как оплатить</a>
+#      invoice_ua:
+#        name:           Банковский перевод по Украине
+#        logo:           "/images/privat-bank.png"
+#        route:          payment_invoice_ua
+#        help:           Банковский перевод по Украине
+#      Russia:
+#        is_group:       true
+#      qiwi:
+#        name:           Платежные терминалы Россия
+#        logo:           "/images/terminals.png"
+#        route:          payment_qiwi
+#        help:           Оплата наличными через платежные терминалы QIWI.
+#        link:           <a href="/page/qiwi" target="_blank">Как оплатить</a>
+#      migom:
+#        name:           "Денежные переводы Migom"
+#        logo:           "/images/migom.png"
+#        route:          payment_migom
+#        help:           Денежные переводы Migom
+#        link:           <a href="http://www.migom.com/how_to_send/" target="_blank">Как оплатить</a>
