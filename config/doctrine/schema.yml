@@ -11,7 +11,7 @@ Invoice:
     Timestampable:    ~
   columns:
     user_id:          { type: integer, notnull: true }
-    model:            { type: enum, values: ['booking', 'realty'], notnull: true }
+    model:            { type: enum, values: ['realty'], notnull: true }
     amount:           { type: decimal, length: 18, scale: 2, notnull: true }
     description:      { type: string(1024) }
     payment_system:   { type: string(25) }
